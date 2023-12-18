@@ -16,6 +16,7 @@ public class FamilyImmigrationStatusPage extends Utility {
     @FindBy(css ="body div[id='wrapper'] div[class='smart_answer'] main[id='content'] div[class='govuk-grid-row'] div[id='result-info'] div[data-flow-name='check-uk-visa'] div[class='govuk-!-margin-bottom-6'] h2:nth-child(1)")
     WebElement elementVerifyText;
     public void verifyFamilyImmigrationStatus(String verifyText2){
+        log.info("verifyFamilyImmigrationStatus " + elementVerifyText.toString());
         Assert.assertEquals(getTextFromElement(elementVerifyText),verifyText2, "Error");
 
 

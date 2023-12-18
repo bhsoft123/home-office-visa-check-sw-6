@@ -19,8 +19,11 @@ public class DurationOfStayPage extends Utility {
 
     public void selectIntentionToStay() throws InterruptedException {
         Thread.sleep(2000);
+        log.info("selectIntentionToStay " + longerThanSixMonths.toString());
         clickOnElement(longerThanSixMonths);
     }
-    public void selectContinueButtonOnDurationPage(){ clickOnElement(continueButtonOnDuration);
+    public void selectContinueButtonOnDurationPage(){
+        log.info("selectContinueButtonOnDurationPage " + continueButtonOnDuration.toString());
+        clickOnElement(continueButtonOnDuration);
     }
 }

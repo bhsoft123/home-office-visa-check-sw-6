@@ -22,9 +22,15 @@ public class StartPage extends Utility {
     WebElement startButton;
 
 
-    public void clickOnAccept(){ clickOnElement(acceptButton);}
-    public void clickOnHideButton(){ clickOnElement(hideCookies);}
-    public void clickOnStart() { clickOnElement(startButton);}
+    public void clickOnAccept(){
+        log.info("clickOnAccept: " + acceptButton.toString());
+        clickOnElement(acceptButton);}
+    public void clickOnHideButton(){
+        log.info("clickOnHideButton: " + hideCookies.toString());
+        clickOnElement(hideCookies);}
+    public void clickOnStart() {
+        log.info("clickOnStart: " + startButton.toString());
+        clickOnElement(startButton);}
 
 
 }

@@ -26,15 +26,20 @@ public class WorkTypePage extends Utility {
     @FindBy(css ="body div[id='wrapper'] div[class='smart_answer'] main[id='content'] div[class='govuk-grid-row'] div[id='result-info'] div[data-flow-name='check-uk-visa'] div[class='govuk-!-margin-bottom-6'] h2:nth-child(1)")
     WebElement elementyouMayNeedVisa;
 
-   public void selectPlanningToWork(){ clickOnElement(planningToWork);   }
+   public void selectPlanningToWork(){
+       log.info("selectPlanningToWork: " + planningToWork.toString());
+       clickOnElement(planningToWork);   }
 
    public void selectContinueButtonOnPlanningToWorkPage(){
+       log.info("selectContinueButtonOnPlanningToWorkPage: " + continueButtonPlanning.toString());
        clickOnElement(continueButtonPlanning);
    }
    public void verifyTextVisaToWork(String expectedText){
+       log.info("verifyTextVisaToWork: " + actualTextVisaToWork.toString());
        Assert.assertEquals(getTextFromElement(actualTextVisaToWork), expectedText, "Error");
    }
    public void verifyYouMayNeedVisa(){
+       log.info("verifyYouMayNeedVisa: " + elementyouMayNeedVisa.toString());
        Assert.assertEquals(getTextFromElement(elementyouMayNeedVisa), "You may need a visa","Error");
    }
 }

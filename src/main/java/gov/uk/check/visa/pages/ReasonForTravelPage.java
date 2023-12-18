@@ -34,6 +34,7 @@ public class ReasonForTravelPage extends Utility {
     WebElement verifyreason1;
     public void selectReason(String reason) throws InterruptedException {
         Thread.sleep(2000);
+        log.info("selectReason " + reasonForTravelCheckBox2.toString());
         if (reason.contains("Tourism")){
             clickOnElement(reasonForTravelCheckBox1);
         } else if(reason.contains("Work")){
@@ -42,15 +43,19 @@ public class ReasonForTravelPage extends Utility {
             clickOnElement(reasonForTravelCheckBox4);
         }}
     public void selectReasonForTravel1(String reason1){
+        log.info("selectReasonForTravel1 " + reasonForTravelCheckBox1.toString());
         clickOnElement(reasonForTravelCheckBox1);
     }
     public void selectReasonForTravel4(String reason1){
+        log.info("selectReasonForTravel4 " + reasonForTravelCheckBox4.toString());
         clickOnElement(reasonForTravelCheckBox4);
     }
     public void selectContinueButtonOnReasonPage(){
+        log.info("selectContinueButtonOnReasonPage " + continueButtonOnReason.toString());
         clickOnElement(continueButtonOnReason);
     }
     public void verifyText(){
+        log.info("verifyText " + verifyreason1.toString());
         Assert.assertEquals(getTextFromElement(verifyreason1),"You will not need a visa to come to the UK", "Error");
     }
 }

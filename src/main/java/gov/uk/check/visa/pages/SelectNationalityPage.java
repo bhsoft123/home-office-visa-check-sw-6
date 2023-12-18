@@ -31,6 +31,7 @@ public class SelectNationalityPage extends Utility {
 
     public void checkCountryAvailable(String country2) {
         System.out.println(country2);
+        log.info("checkCountryAvailable: " + selectNationality.toString());
         Select selectCountry = new Select(selectNationality);
         List<WebElement> country_list = selectCountry.getOptions();
         for (WebElement country : country_list) {
